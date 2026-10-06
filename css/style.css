@@ -1,0 +1,278 @@
+/* Remove default spacing from the browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+}
+
+
+/* Left side content */
+.login-info {
+    max-width: 500px;
+}
+
+
+/* Main heading */
+.login-info h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+/* Description */
+.login-info > p {
+    font-size: 18px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* Feature section */
+.feature {
+    background-color: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Feature heading */
+.feature strong {
+    font-size: 16px;
+}
+
+
+/* Feature description */
+.feature p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #6b7280;
+}
+
+
+/* Login card */
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Login heading */
+.login-card h2 {
+    font-weight: 700;
+}
+
+
+/* Input fields */
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+
+/* Login button */
+.btn-primary {
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+/* Mobile responsive design */
+@media (max-width: 767px) {
+
+    .login-info {
+        padding: 40px 20px 20px;
+        text-align: center;
+    }
+
+    .login-info h1 {
+        font-size: 36px;
+    }
+
+    .login-info > p {
+        font-size: 16px;
+    }
+
+    .login-card {
+        margin: 20px;
+        padding: 30px 25px;
+    }
+}
+ /* ================= MOBILE MENU ================= */
+
+.mobile-menu-btn {
+    display: none;
+    background-color: #111827;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.mobile-open {
+        display: block;
+    }
+
+    .dashboard-content {
+        width: 100%;
+    }
+}
+
+/* ================= RECENT ACTIVITY ================= */
+
+#activityContainer .assignment {
+    transition: 0.3s;
+}
+
+#activityContainer .assignment:hover {
+    background-color: #f9fafb;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#activityContainer .assignment h6 {
+    margin-bottom: 5px;
+}
+
+#activityContainer .assignment p {
+    margin-bottom: 0;
+}
+
+/* ================= LOGIN IMPROVEMENTS ================= */
+
+.login-info {
+    animation: fadeIn 0.8s ease;
+}
+
+.login-card {
+    animation: slideUp 0.8s ease;
+}
+
+.login-card .form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.login-card .btn-primary {
+    transition: 0.3s;
+}
+
+.login-card .btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= THEME TOGGLE ================= */
+
+.theme-btn {
+    border: none;
+    background-color: white;
+    color: #111827;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+body.dark-mode {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark-mode .dashboard-content {
+    background-color: #0f172a;
+}
+
+body.dark-mode .dashboard-card,
+body.dark-mode .stat-card {
+    background-color: #1e293b;
+    color: #e5e7eb;
+}
+
+body.dark-mode .dashboard-header p,
+body.dark-mode .stat-card p,
+body.dark-mode .assignment p,
+body.dark-mode .date {
+    color: #94a3b8;
+}
+
+body.dark-mode .theme-btn {
+    background-color: #1e293b;
+    color: white;
+}
+
+body.dark-mode .table {
+    color: #e5e7eb;
+}
+
+body.dark-mode .table th {
+    color: #94a3b8;
+}
+
+/* ================= FORM VALIDATION ================= */
+
+.validation-error {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-control.input-error {
+    border-color: #dc3545;
+}
+
+.form-control.input-success {
+    border-color: #198754;
+}
+
